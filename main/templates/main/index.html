@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sleep Better: consejos y servicios para mejorar tu sueño.">
+    <meta name="keywords" content="sueño, descanso, salud, sleep better, insomnio">
+    <meta name="author" content="Grupo SleepBetter">
+    <meta name="robots" content="index, follow">
+    <title>Sleep Better - Mejora tu Descanso</title>
+    <link rel="icon" href="{% static 'img/favicon-sb.ico' %}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body class="light-mode">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'img/sb-logo.png' %}" alt="Sleep Better Logo" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'home' %}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'articles' %}">Q&A</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'links' %}">Enlaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'privacy' %}">Privacidad</a></li>
+                </ul>
+                <button id="theme-toggle" class="btn"><i class="bi bi-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <header class="main-header">
+        <h1>¿Qué es Sleep Better?</h1>
+        <p>En Sleep Better estamos comprometidos a hacer de tu sueño una mejor experiencia Respira, duerme, vive.</p>
+    </header>
+
+    <!-- Carrusel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'img/imagen1.png' %}" class="d-block w-100" alt="Dormir bien">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'img/imagen2.png' %}" class="d-block w-100" alt="Relajación">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Líderes en el mercado -->
+    <section class="market-leaders-section container my-5">
+        <h2 class="text-center">Líderes en el mercado</h2>
+        <p class="text-center lead">
+            En Sleep Better, la excelencia en el mercado es nuestro compromiso. Contamos con un equipo de doctores altamente experimentados, como el Dr. Federico Mejía Biaggi, neumólogo con más de 30 años de trayectoria, y el Dr. Ángel Contreras, cardiólogo con más de 20 años de experiencia en el cuidado del corazón. Respaldados por tecnología de vanguardia y avalados por expertos internacionales en terapia del sueño, ofrecemos soluciones efectivas para la apnea del sueño. Además, llevamos la salud hasta tu hogar con la polisomnografía ambulatoria, permitiéndote realizar un estudio del sueño sin necesidad de hospitalización. Con equipos automáticos y fáciles de usar, nuestros pacientes han transformado su descanso, mejorando su bienestar y calidad de vida. En Sleep Better, queremos que respires, duermas y vivas mejor.
+        </p>
+    </section>
+
+    <!-- FlexGrid -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-4 hover-effect">
+                <h3>Consejos</h3>
+                <p>Técnicas para mejorar tu rutina de sueño.</p>
+            </div>
+            <div class="col-md-4 hover-effect">
+                <h3>Servicios</h3>
+                <p>Consultas personalizadas para tu descanso.</p>
+            </div>
+            <div class="col-md-4 hover-effect">
+                <h3>Productos</h3>
+                <p>Recomendaciones para dormir mejor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de elementos -->
+    <section class="container my-5">
+        <h2>Beneficios de Dormir Bien</h2>
+        <ul class="list-group">
+            <li class="list-group-item">Mejora tu concentración</li>
+            <li class="list-group-item">Reduce el estrés</li>
+            <li class="list-group-item">Fortalece tu sistema inmunológico</li>
+        </ul>
+    </section>
+
+    <!-- Mapa -->
+    <h4 class="map-title">¡Ven y visita nuestra nueva tienda!</h4>
+    <div class="container my-5 d-flex justify-content-center">
+        <iframe 
+         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.9947324323884!2d-69.93622409999999!3d18.483897799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eaf897dfc4daa59%3A0x87da951ea2682654!2sSleep%20Better%20CPAP%20y%20Polisomnografia!5e0!3m2!1sen!2sdo!4v1741401392189!5m2!1sen!2sdo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Contáctanos</h2>
+        
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+        
+        <form method="POST" class="mx-auto" style="max-width: 500px;">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2025 Sleep Better. Todos los derechos reservados.</p>
+        <div>
+            <a href="https://www.facebook.com/sleepbetterdr" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="http://instagram.com/sleepbetterrd/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html> 

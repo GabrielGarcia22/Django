@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sleep Better: preguntas frecuentes sobre nuestros productos y servicios para mejorar tu sueño.">
+    <meta name="keywords" content="sueño, descanso, salud, sleep better, insomnio, apnea del sueño">
+    <meta name="author" content="Sebastian Acosta 23-1806">
+    <meta name="robots" content="index, follow">
+    <title>Sleep Better - Manuales y Productos</title>
+    <link rel="icon" href="{% static 'img/favicon-sb.ico' %}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="light-mode">
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'img/sb-logo.png' %}" alt="Sleep Better Logo" width="150">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'articles' %}">Q&A</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'links' %}">Enlaces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'privacy' %}">Privacidad</a></li>
+                </ul>
+                <button id="theme-toggle" class="btn"><i class="bi bi-moon"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección principal -->
+    <header class="main-header">
+        <h1>Nuestros Productos</h1>
+    </header>
+
+    <!-- Cuadrícula de Productos 1 -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4">
+                <a href="http://sleepbetterdr.com/storage/app/uploads/public/5c8/8ba/3f3/5c88ba3f37e84636445484.pdf" target="_blank" class="text-decoration-none">
+                    <div class="hover-effect">
+                        <img src="{% static 'img/p2.png' %}" class="img-fluid mb-3" alt="Producto 1">
+                        <h3>Respironic DreamStation</h3>
+                        <p>Descargar manual</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-4">
+                <a href="http://sleepbetterdr.com/storage/app/uploads/public/5c8/94e/a86/5c894ea861c70582675437.pdf" target="_blank" class="text-decoration-none">
+                    <div class="hover-effect">
+                        <img src="{% static 'img/p1.png' %}" class="img-fluid mb-3" alt="Producto 2">
+                        <h3>ResMed: AirFit N30i</h3>
+                        <p>Descargar manual</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-4">
+                <a href="http://sleepbetterdr.com/storage/app/uploads/public/5c8/938/174/5c89381747203829292231.pdf" target="_blank" class="text-decoration-none">
+                    <div class="hover-effect">
+                        <img src="{% static 'img/p3.png' %}" class="img-fluid mb-3" alt="Producto 3">
+                        <h3>Resmed AirCurve 10</h3>
+                        <p>Descargar manual</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuadrícula de Productos 2 -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4">
+                <a href="http://sleepbetterdr.com/storage/app/uploads/public/5c8/93e/c9e/5c893ec9e6764521812034.pdf" target="_blank" class="text-decoration-none">
+                    <div class="hover-effect">
+                        <img src="{% static 'img/p4.png' %}" class="img-fluid mb-3" alt="Producto 1">
+                        <h3>ResMed AirSense 10</h3>
+                        <p>Descargar manual</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-4">
+                <a href="http://sleepbetterdr.com/storage/app/uploads/public/5c8/944/a5e/5c8944a5e263e130063202.pdf" target="_blank" class="text-decoration-none">
+                    <div class="hover-effect">
+                        <img src="{% static 'img/p5.png' %}" class="img-fluid mb-3" alt="Producto 2">
+                        <h3>ResMed: AirFit P10</h3>
+                        <p>Descargar manual</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-4">
+                <a href="http://sleepbetterdr.com/storage/app/uploads/public/5c8/950/a7a/5c8950a7aedad957327071.pdf" target="_blank" class="text-decoration-none">
+                    <div class="hover-effect">
+                        <img src="{% static 'img/p6.png' %}" class="img-fluid mb-3" alt="Producto 3">
+                        <h3>ResMed: AirFit N20</h3>
+                        <p>Descargar manual</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuadrícula de Productos 3 -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4">
+                <a href="http://sleepbetterdr.com/storage/app/uploads/public/5c8/94e/a86/5c894ea861c70582675437.pdf" target="_blank" class="text-decoration-none">
+                    <div class="hover-effect">
+                        <img src="{% static 'img/p7.png' %}" class="img-fluid mb-3" alt="Producto 1">
+                        <h3>ResMed: AirFit N30i</h3>
+                        <p>Descargar manual</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-4">
+                <a href="http://sleepbetterdr.com/storage/app/uploads/public/5c8/958/2f4/5c89582f45693967223860.pdf" target="_blank" class="text-decoration-none">
+                    <div class="hover-effect">
+                        <img src="{% static 'img/p9.png' %}" class="img-fluid mb-3" alt="Producto 2">
+                        <h3>ResMed: AirFit N30i</h3>
+                        <p>Descargar manual</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Producto 3 -->
+            <div class="col-md-4">
+                <div class="hover-effect">
+                    <img src="{% static 'img/p10.png' %}" class="img-fluid mb-3" alt="Producto 3">
+                    <h3>Agua destilada</h3>
+                    <p>Para CPAP</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="brands">
+            <div class="container">
+                <h1>Confiamos en nuestras marcas</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="http://sleepbetterdr.com/themes/sleep-better/assets/images/logos/resmed-logo.png">
+                        <p> </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="http://sleepbetterdr.com/themes/sleep-better/assets/images/logos/philips-logo.png">
+                        <p> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>© 2025 Sleep Better. Todos los derechos reservados.</p>
+        <div>
+            <a href="https://www.facebook.com/sleepbetterdr" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="http://instagram.com/sleepbetterrd/" target="_blank"><i class="bi bi-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html> 
